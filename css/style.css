@@ -342,6 +342,10 @@ button {
         margin-top: -5rem;
     }
 
+    #contato h2 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
     #contato .icones-contato {
         margin-top: 0;
         margin-bottom: -4rem;
