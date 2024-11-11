@@ -309,9 +309,41 @@ button {
 
 
 /* Responsividade */
-@media (max-width: 37.5rem) { /* 600px */
-    nav ul li {
+@media (max-width: 85.375rem) { /* 1366px */
+    nav ul il {
         display: block;
-        margin: 0.3125rem 0; /* 5px */
     }
+    
+    #sobre-mim {
+        margin-top: 0;
+        margin-bottom: -2rem;
+    }
+
+    #sobre-mim h2 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #linguagens {
+        margin-top: 0;
+    }
+
+    #linguagens h2 {
+        margin-bottom: 4rem;
+    }
+
+    #contato {
+        scale: 100%;
+        margin-top: -2rem;
+    }
+
+    #contato img {
+        scale: 80%;
+        margin-top: -5rem;
+    }
+
+    #contato .icones-contato {
+        margin-top: 0;
+        margin-bottom: -4rem;
+    } 
 }
