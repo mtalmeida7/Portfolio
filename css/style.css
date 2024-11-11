@@ -1,0 +1,317 @@
+/* Definindo a fonte DIN Neuzeit Grotesk */
+@font-face {
+    font-family: 'DIN Neuzeit Grotesk';
+    src: url('fonts/DINNeuzeitGrotesk-Regular.woff2') format('woff2'),
+         url('fonts/DINNeuzeitGrotesk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Definindo a fonte Avenir Light */
+@font-face {
+    font-family: 'Avenir Light';
+    src: url('fonts/AvenirLight.woff2') format('woff2'),
+         url('fonts/AvenirLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Aplicando a fonte no body */
+body {
+    font-family: 'Avenir Light', sans-serif; /* Avenir Light é aplicada */
+}
+
+/* Cabeçalho */
+header {
+    font-family: 'DIN Neuzeit Grotesk', sans-serif; /* DIN Neuzeit Grotesk aplicada */
+    background-color: #000000;
+    color: #fff;
+    padding: 0.625rem; /* 10px */
+    text-align: center;
+}
+
+/* Restante do CSS conforme o código anterior */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 1rem; /* 16px */
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.3125rem 0; /* 5px */
+    display: block;
+}
+
+/* Linha animada embaixo do item de navegação */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.125rem; /* 2px */
+    background-color: #ff0000;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 37.5rem) { /* 600px */
+    nav ul li {
+        display: block;
+        margin: 0.3125rem 0; /* 5px */
+    }
+}
+
+/* Seções */
+section {
+    padding: 1.25rem; /* 20px */
+    margin: 0.625rem; /* 10px */
+}
+
+h2 {
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Faz com que o link herde a cor do texto ao redor (sem mudança de cor por padrão) */
+}
+
+a:hover {
+    color: #ff0000; /* Cor que o link terá quando o mouse passar por cima */
+}
+
+/* Centraliza o título e os elementos dentro da seção #sobre-mim */
+#sobre-mim {
+    text-align: center;
+}
+
+#sobre-mim h2 {
+    margin-top: 1.875rem; /* 30px */
+    margin-bottom: 2.5rem; /* 40px */
+}
+
+/* Estilos para a imagem inicial */
+.screenshot {
+    width: 31.25rem; /* 500px */
+    height: auto;
+    margin-top: 0.625rem; /* 10px */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer; /* Indica que é clicável */
+    transition: transform 0.3s ease-in-out; /* Efeito ao passar o mouse (opcional) */
+    border-radius: 1rem;
+}
+
+.screenshot:hover {
+    transform: scale(1.05); /* Aumenta a imagem um pouco ao passar o mouse */
+}
+
+/* Estilo do modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro para destacar a imagem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain; /* Ajusta a imagem para caber no modal sem distorcer */
+}
+
+.modal:active {
+    cursor: pointer; /* Exibe cursor de clicar quando clicar fora da imagem */
+}
+
+/* Estilo para a foto de perfil */
+.foto-perfil{
+    display: flex;
+    justify-content: center;
+    margin: 1.25rem 0; /* 20px */
+}
+
+.foto-perfil2{
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+.foto-perfil img,
+.foto-perfil2 img {
+    width: 9.375rem; /* 150px */
+    height: 9.375rem; /* 150px */
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover;
+}
+
+
+/* Projetos */
+.projeto {
+    background-color: #e1e1e1;
+    padding: 0.9375rem; /* 15px */
+    margin: 0.625rem 0; /* 10px */
+    border-radius: 0.625rem;
+}
+
+/* Contato */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#projetos h2 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+form label {
+    margin: 0.3125rem 0; /* 5px */
+}
+
+form input, form textarea {
+    padding: 0.5rem; /* 8px */
+    margin-bottom: 0.625rem; /* 10px */
+}
+
+p {
+    margin-top: 3.125rem; /* 50px */
+}
+
+/* Configura o layout para que o footer fique no fim da página */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Permite que o conteúdo ocupe o espaço restante */
+.content {
+    flex: 1;
+    padding: 0;
+}
+
+/* Estilo para a seção de linguagens */
+#linguagens {
+    text-align: center;
+    margin-top: 1.25rem; /* 20px */
+}
+
+#linguagens h2 {
+    font-size: 1.5rem; /* 24px */
+    margin-bottom: 7.5rem; /* 120px */
+}
+
+/* Estilo para as logos das linguagens */
+.linguagens-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.9375rem; /* 15px */
+}
+
+.linguagens-logos img {
+    width: 3.75rem; /* 60px */
+    height: 3.75rem; /* 60px */
+    object-fit: contain;
+}
+
+/* Estilo para o rodapé */
+footer {
+    text-align: center;
+    padding: 0.625rem; /* 10px */
+    font-size: 0.9rem; /* 14px */
+}
+
+.projeto {
+    text-align: center; /* Centraliza o conteúdo dentro do .projeto */
+}
+
+.projeto h3 {
+    margin: 0;
+    padding: 0.625rem 0; /* 10px */
+}
+
+/* Centraliza o título da seção de contato */
+#contato h2 {
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+/* Estilo para o botão */
+button {
+    border: none; /* Sem borda */
+    padding: 1rem 2rem; /* Aumentando o padding para 16px em cima e embaixo, 32px nas laterais */
+    cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+    border-radius: 0.3125rem; /* Borda arredondada */
+}
+
+/* Estilizando os ícones de contato */
+.icones-contato {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones */
+    gap: 1rem; /* Espaçamento entre os ícones */
+    margin-top: 1.5rem; /* Espaçamento acima */
+}
+
+.icones-contato a {
+    font-size: 2rem; /* Aumenta o tamanho dos ícones */
+    color: #000; /* Cor dos ícones */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.3s ease; /* Transição suave para a cor */
+}
+
+.icones-contato a:hover {
+    color: #ff0000; /* Muda a cor dos ícones quando o mouse passa por cima */
+}
+
+/* Estilo para a imagem de contato (estilo similar ao da foto de perfil) */
+.imagem-contato {
+    display: flex;
+    justify-content: center;
+    margin: 1.25rem 0; /* 20px */
+}
+
+.imagem-contato img {
+    width: 9.375rem; /* 150px (ajustado para o mesmo tamanho da foto de perfil) */
+    height: 9.375rem; /* 150px */
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    border: 2px solid #fff; /* Adiciona uma borda branca para destacar a imagem */
+}
+
+
+/* Responsividade */
+@media (max-width: 37.5rem) { /* 600px */
+    nav ul li {
+        display: block;
+        margin: 0.3125rem 0; /* 5px */
+    }
+}
